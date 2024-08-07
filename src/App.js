@@ -122,9 +122,9 @@ const TradeTable = () => {
 
   return (
     <div className="container mx-auto p-4 2xl:px-8">
-      {/* First Section for search and another */}
       <h3 className="text-3xl font-bold ">Trades</h3>
 
+      {/* First Section for search and another */}
       <div className='flex justify-between mt-4'>
         <h2 className="text-2xl font-bold ">Open Trades</h2>
         <div className="flex items-center relative flex-wrap gap-2">
@@ -190,7 +190,7 @@ const TradeTable = () => {
 
 
 
-      {/* body of the table */}
+      {/*  table */}
       <div className="overflow-x-auto border-2 rounded-xl my-6 w-full">
         <table className="w-full bg-white">
           <thead>
@@ -207,7 +207,6 @@ const TradeTable = () => {
               <th className="text-center py-3 px-5  font-semibold text-sm text-blue-700 opacity-[0.5]">Status</th>
             </tr>
           </thead>
-          {/* bodey of the table */}
           <tbody className="text-black font-bold ">
             {/* make maping to opentrade to generate the dataa */}
             {openTrades.map((trade, index) => (
@@ -235,10 +234,10 @@ const TradeTable = () => {
 
 
 
-      {/* Pagination and select Section  */}
+      {/* Pagination and select Section  For Open Trades*/}
       <div className="mt-10 mb-16">
         <div className="flex justify-between items-center flex-wrap">
-          <div className='flex gap-2 items-center '>
+          <div className='flex gap-2 items-center mb-4'>
             <p className='text-[#a1a1a1] font-bold'>Showing</p>
             <select className='border-2  rounded-md py-2 px-3 border-[#ededed]'>
               <option value="10">10 </option>
@@ -279,6 +278,7 @@ const TradeTable = () => {
 
 
       {/* Closed Trades Section  */}
+
 
       {/* search section */}
       <div className='flex justify-between'>
@@ -344,6 +344,7 @@ const TradeTable = () => {
         </div>
       </div>
 
+      {/* table */}
       <div className="overflow-x-auto border-2 rounded-xl my-6 w-full">
         <table className="w-full bg-white">
           <thead>
@@ -388,8 +389,8 @@ const TradeTable = () => {
       {/* Showing and Pagination section ForClosed Trade*/}
 
       <div className="mt-10 mb-10">
-        <div className="flex justify-between items-center flex-wrap">
-          <div className='flex gap-2 items-center '>
+        <div className="flex justify-between items-center flex-wrap ">
+          <div className='flex gap-2 items-center mb-4'>
             <p className='text-[#a1a1a1] font-bold'>Showing</p>
             <select className='border-2 rounded-md py-2 px-3 border-[#ededed]'>
               <option value="10">10 </option>
