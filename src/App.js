@@ -119,7 +119,7 @@ const TradeTable = () => {
   return (
     <div className="container mx-auto p-4 2xl:px-8">
       {/* First Section for search and another */}
-      <h2 className="text-2xl font-bold ">Trades</h2>
+      <h3 className="text-3xl font-bold ">Trades</h3>
 
       <div className='flex justify-between mt-4'>
         <h2 className="text-2xl font-bold ">Open Trades</h2>
