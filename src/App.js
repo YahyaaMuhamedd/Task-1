@@ -87,7 +87,7 @@ const TradeTable = () => {
   const [activeIndexClosed, setActiveIndexClosed] = useState(0);
 
 
-  // elements of five buttons 1 to 5 
+  // elements of five buttons
   const elements = ['1', '2', '3', '4', '5']
 
 
@@ -118,17 +118,20 @@ const TradeTable = () => {
 
   return (
     <div className="container mx-auto p-4 2xl:px-8">
-      <div className='flex justify-between'>
+      {/* First Section for search and another */}
+      <h2 className="text-2xl font-bold ">Trades</h2>
+
+      <div className='flex justify-between mt-4'>
         <h2 className="text-2xl font-bold ">Open Trades</h2>
         <div className="flex items-center relative flex-wrap gap-2">
           <div className='flex flex-wrap justify-end'>
-            <select className="border bg-slate-50 px-3 py-[6.5px] rsvselect ">
-              <option value="Search by">Search by</option>
+            <select className=" bg-[#efefef] px-3 py-[6.5px] rsvselect text-blue-600">
+              <option value="Search by" >Search by</option>
             </select>
             <div className='relative'>
               <input
                 type="text"
-                className="border px-3 py-1 max-[487px]:mb-2"
+                className=" outline-none px-3 py-1 max-[487px]:mb-2 bg-[#f7f7f7]"
                 placeholder="Search.."
 
               />
@@ -148,7 +151,7 @@ const TradeTable = () => {
               </button>
             </div>
           </div>
-          <div className='gap-2 flex '>
+          <div className='gap-2 flex items-center'>
             <button className=" px-2 py-1 rounded bg-white border-2 border-[dodgerblue] shadow-sm shadow-[dodgerblue] ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -183,7 +186,7 @@ const TradeTable = () => {
 
 
 
-
+      {/* body of the table */}
       <div className="overflow-x-auto border-2 rounded-xl my-6 w-full">
         <table className="w-full bg-white">
           <thead>
@@ -200,8 +203,9 @@ const TradeTable = () => {
               <th className="text-center py-3 px-5  font-semibold text-sm text-blue-700 opacity-[0.5]">Status</th>
             </tr>
           </thead>
+          {/* bodey of the table */}
           <tbody className="text-black font-bold ">
-            {/* make maping to opentrade to generate the dynamic dataa */}
+            {/* make maping to opentrade to generate the dataa */}
             {openTrades.map((trade, index) => (
               <tr key={index}>
                 <td className="text-left py-6 px-10 text-lg">{trade.openedAt} <br /> {trade.SecondTime} </td>
@@ -227,12 +231,12 @@ const TradeTable = () => {
 
 
 
-
-      <div className="mt-10 mb-10">
+      {/* Pagination and select Section  */}
+      <div className="mt-10 mb-16">
         <div className="flex justify-between items-center flex-wrap">
           <div className='flex gap-2 items-center '>
             <p className='text-[#a1a1a1] font-bold'>Showing</p>
-            <select className='border-2 rounded-md py-2 px-3 border-[#ededed]'>
+            <select className='border-2  rounded-md py-2 px-3 border-[#ededed]'>
               <option value="10">10 </option>
             </select>
             <p> of {openTrades.length + 47}</p>
@@ -269,9 +273,72 @@ const TradeTable = () => {
 
 
 
+
       {/* Closed Trades Section  */}
 
+      {/* search section */}
+      <div className='flex justify-between'>
+        <h2 className="text-2xl font-bold ">Open Trades</h2>
+        <div className="flex items-center relative flex-wrap gap-2">
+          <div className='flex flex-wrap justify-end'>
+            <select className=" bg-[#efefef] px-3 py-[6.5px] rsvselect text-blue-600">
+              <option value="Search by" >Search by</option>
+            </select>
+            <div className='relative'>
+              <input
+                type="text"
+                className=" outline-none px-3 py-1 max-[487px]:mb-2 bg-[#f7f7f7]"
+                placeholder="Search.."
 
+              />
+              <button className="absolute right-[1px] top-0.5 border-none px-3 py-1 ">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div className='gap-2 flex items-center'>
+            <button className=" px-2 py-1 rounded bg-white border-2 border-[dodgerblue] shadow-sm shadow-[dodgerblue] ">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm-2-2a2 2 0 100-4 2 2 0 000 4z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </button>
+            <button className=" px-2 py-1 rounded bg-white border-2 border-[dodgerblue] shadow-sm shadow-[dodgerblue] ">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707a1 1 0 00-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414l-3-3z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
 
       <div className="overflow-x-auto border-2 rounded-xl my-6 w-full">
         <table className="w-full bg-white">
@@ -290,7 +357,7 @@ const TradeTable = () => {
             </tr>
           </thead>
           <tbody className="text-black font-bold ">
-            {/* make maping to opentrade to generate the dynamic dataa */}
+            {/* make maping to opentrade to generate the dataa */}
             {closedTrades.map((trade, index) => (
               <tr key={index}>
                 <td className="text-left py-6 px-10 text-lg">{trade.openedAt} <br /> {trade.SecondTime} </td>
@@ -303,7 +370,7 @@ const TradeTable = () => {
                 <td className="text-center py-6 px-5 text-lg">{trade.direction}</td>
                 <td className="text-center py-6 px-5 text-lg">{trade.pnl}</td>
                 <td className="text-center py-6 px-5 text-lg">
-                  <span className={`py-1 px-1 rounded-full text-xs ${trade.status === 'Running' ? 'bg-yellow-400 text-white' : ''}`}>
+                  <span className={`py-2 px-3 rounded-full text-xs ${trade.status === 'Won' ? 'bg-green-500 text-white' : 'bg-red-600 text-white'}`}>
                     {trade.status}
                   </span>
                 </td>
