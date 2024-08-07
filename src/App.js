@@ -351,7 +351,7 @@ const TradeTable = () => {
               <th className="text-left py-3 px-12   font-semibold text-sm text-blue-700 opacity-[0.5]">Opened <br /> At</th>
               <th className="text-left py-3  px-9   font-semibold text-sm text-blue-700 opacity-[0.5]">Closed <br /> At</th>
               <th className="text-center py-3 px-5  font-semibold text-sm text-blue-700 opacity-[0.5]">Asset</th>
-              <th className="text-left py-3 px-5 font-semibold text-sm text-blue-700 opacity-[0.5]">Amount</th>
+              <th className="text-center py-3 px-5 font-semibold text-sm text-blue-700 opacity-[0.5]">Amount</th>
               <th className="text-left py-3 px-5  font-semibold text-sm text-blue-700 opacity-[0.5]">Opening <br /> Value</th>
               <th className="text-left py-3  px-5 font-semibold text-sm text-blue-700 opacity-[0.5]">Current <br /> Value</th>
               <th className="text-center py-3 px-5  font-semibold text-sm text-blue-700 opacity-[0.5]">QTY</th>
@@ -367,7 +367,7 @@ const TradeTable = () => {
                 <td className="text-left py-6 px-10 text-lg">{trade.openedAt} <br />{trade.SecondTime} </td>
                 <td className="text-left py-6 px-5 text-lg">{trade.closedAt}<br />{trade.SecondTime}</td>
                 <td className="text-center py-6 px-5 text-lg">{trade.asset}</td>
-                <td className="text-left py-6 px-5 text-lg"> {trade.amount}</td>
+                <td className="text-center py-6 px-5 text-lg"> {trade.amount}</td>
                 <td className="text-left py-6 px-5 text-lg">{trade.openingValue} <br /> {trade.curreny} </td>
                 <td className="text-left py-6 px-5 text-lg">{trade.currentValue} <br /> {trade.curreny} </td>
                 <td className="text-center py-6 px-5 text-lg">{trade.qty}<br />{trade.categoery}</td>
