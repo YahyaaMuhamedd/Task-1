@@ -17,11 +17,12 @@
 html {
   scroll-behavior: smooth;
 }
+
 @media only screen and (max-width: 512px) {
-  .rsvselect{
-    max-width: 220px;
+  .rsvselect {
     width: 100%;
   }
+
   .min {
     width: min-content;
   }
