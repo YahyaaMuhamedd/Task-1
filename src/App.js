@@ -127,15 +127,15 @@ const TradeTable = () => {
       {/* First Section for search and another */}
       <div className='flex justify-between mt-4'>
         <h2 className="text-2xl font-bold ">Open Trades</h2>
-        <div className="flex items-center relative flex-wrap gap-2">
+        <div className="flex items-center relative flex-wrap gap-2 min">
           <div className='flex flex-wrap justify-end'>
-            <select className=" bg-[#efefef] px-3 py-[6.5px] rsvselect text-blue-600">
+            <select className=" bg-[#efefef] px-3 py-[6px] rsvselect text-blue-600">
               <option value="Search by" >Search by</option>
             </select>
             <div className='relative'>
               <input
                 type="text"
-                className=" outline-none px-3 py-1 max-[487px]:mb-2 bg-[#f7f7f7]"
+                className=" outline-none px-[13px] py-1 max-[487px]:mb-2 bg-[#f7f7f7]"
                 placeholder="Search.."
 
               />
@@ -155,7 +155,7 @@ const TradeTable = () => {
               </button>
             </div>
           </div>
-          <div className='gap-2 flex items-center'>
+          <div className='gap-2 flex items-center '>
             <button className=" px-2 py-1 rounded bg-white border-2 border-[dodgerblue] shadow-sm shadow-[dodgerblue] ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -239,7 +239,7 @@ const TradeTable = () => {
         <div className="flex justify-between items-center flex-wrap">
           <div className='flex gap-2 items-center mb-4'>
             <p className='text-[#a1a1a1] font-bold'>Showing</p>
-            <select className='border-2  rounded-md py-2 px-3 border-[#ededed]'>
+            <select className='border-2 rounded-md py-2 px-3 border-[#ededed]'>
               <option value="10">10 </option>
             </select>
             <p> of {openTrades.length + 47}</p>
@@ -280,18 +280,19 @@ const TradeTable = () => {
       {/* Closed Trades Section  */}
 
 
+    
       {/* search section */}
       <div className='flex justify-between'>
         <h2 className="text-2xl font-bold ">Open Trades</h2>
-        <div className="flex items-center relative flex-wrap gap-2">
+        <div className="flex items-center relative flex-wrap gap-2 min">
           <div className='flex flex-wrap justify-end'>
-            <select className=" bg-[#efefef] px-3 py-[6.5px] rsvselect text-blue-600">
+            <select className=" bg-[#efefef] px-3 py-[6px] rsvselect text-blue-600">
               <option value="Search by" >Search by</option>
             </select>
             <div className='relative'>
               <input
                 type="text"
-                className=" outline-none px-3 py-1 max-[487px]:mb-2 bg-[#f7f7f7]"
+                className=" outline-none px-[13px] py-1 max-[487px]:mb-2 bg-[#f7f7f7]"
                 placeholder="Search.."
 
               />

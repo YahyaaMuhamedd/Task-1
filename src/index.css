@@ -22,4 +22,7 @@ html {
     max-width: 220px;
     width: 100%;
   }
+  .min {
+    width: min-content;
+  }
 }
