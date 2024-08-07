@@ -370,7 +370,7 @@ const TradeTable = () => {
                 <td className="text-center py-6 px-5 text-lg">{trade.direction}</td>
                 <td className="text-center py-6 px-5 text-lg">{trade.pnl}</td>
                 <td className="text-center py-6 px-5 text-lg">
-                  <span className={`py-2 px-3 rounded-full text-xs ${trade.status === 'Won' ? 'bg-green-500 text-white' : 'bg-red-600 text-white'}`}>
+                  <span className={`py-2 px-3 rounded-full text-xs ${trade.status === 'Won' ? 'bg-green-500 text-white' : 'bg-red-500 text-white'}`}>
                     {trade.status}
                   </span>
                 </td>
