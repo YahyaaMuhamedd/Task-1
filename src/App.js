@@ -56,12 +56,14 @@ const TradeTable = () => {
   // Usestate to store data for closedtradess
   const [closedTrades, setClosedTrades] = useState([
     {
-      openedAt: '07-11-2023 10:01:33',
-      closedAt: '07-11-2023 10:01:33',
+      openedAt: '07-11-2023',
+      SecondTime: '10:01:33',
+      closedAt: '07-11-2023',
       asset: 'BTC/USDT',
       amount: '27 USD',
-      openingValue: '0.279 USD',
-      currentValue: '0.279 USD',
+      openingValue: '0.279',
+      curreny: 'USD',
+      currentValue: '0.279',
       qty: '96.484',
       categoery: 'SUGAR',
       direction: 'Buy',
@@ -69,12 +71,14 @@ const TradeTable = () => {
       status: 'Won',
     },
     {
-      openedAt: '07-11-2023 10:01:33',
-      closedAt: '07-11-2023 10:01:33',
+      openedAt: '07-11-2023',
+      SecondTime: '10:01:33',
+      closedAt: '07-11-2023',
       asset: 'BTC/USDT',
       amount: '27 USD',
-      openingValue: '0.279 USD',
-      currentValue: '0.279 USD',
+      openingValue: '0.279',
+      curreny: 'USD',
+      currentValue: '0.279',
       qty: '96.484',
       categoery: 'SUGAR',
       direction: 'Sell',
@@ -190,7 +194,7 @@ const TradeTable = () => {
       <div className="overflow-x-auto border-2 rounded-xl my-6 w-full">
         <table className="w-full bg-white">
           <thead>
-            <tr className='bg-[#f7f7f7]'>
+            <tr className='bg-[#f7f7f7] border-b-2'>
               <th className="text-left py-3 px-10   font-semibold text-sm text-blue-700 opacity-[0.5]">Opened At</th>
               <th className="text-center py-3  px-5   font-semibold text-sm text-blue-700 opacity-[0.5]">Asset</th>
               <th className="text-center py-3 px-5  font-semibold text-sm text-blue-700 opacity-[0.5]">Leverage</th>
@@ -343,10 +347,10 @@ const TradeTable = () => {
       <div className="overflow-x-auto border-2 rounded-xl my-6 w-full">
         <table className="w-full bg-white">
           <thead>
-            <tr className='bg-[#f7f7f7]'>
-              <th className="text-left py-3 px-10   font-semibold text-sm text-blue-700 opacity-[0.5]">Opened At</th>
-              <th className="text-center py-3  px-5   font-semibold text-sm text-blue-700 opacity-[0.5]">Asset</th>
-              <th className="text-center py-3 px-5  font-semibold text-sm text-blue-700 opacity-[0.5]">Leverage</th>
+            <tr className='bg-[#f7f7f7] border-b-2'>
+              <th className="text-left py-3 px-12   font-semibold text-sm text-blue-700 opacity-[0.5]">Opened <br /> At</th>
+              <th className="text-left py-3  px-9   font-semibold text-sm text-blue-700 opacity-[0.5]">Closed <br /> At</th>
+              <th className="text-center py-3 px-5  font-semibold text-sm text-blue-700 opacity-[0.5]">Asset</th>
               <th className="text-left py-3 px-5 font-semibold text-sm text-blue-700 opacity-[0.5]">Amount</th>
               <th className="text-left py-3 px-5  font-semibold text-sm text-blue-700 opacity-[0.5]">Opening <br /> Value</th>
               <th className="text-left py-3  px-5 font-semibold text-sm text-blue-700 opacity-[0.5]">Current <br /> Value</th>
@@ -360,10 +364,10 @@ const TradeTable = () => {
             {/* make maping to opentrade to generate the dataa */}
             {closedTrades.map((trade, index) => (
               <tr key={index}>
-                <td className="text-left py-6 px-10 text-lg">{trade.openedAt} <br /> {trade.SecondTime} </td>
+                <td className="text-left py-6 px-10 text-lg">{trade.openedAt} <br />{trade.SecondTime} </td>
+                <td className="text-left py-6 px-5 text-lg">{trade.closedAt}<br />{trade.SecondTime}</td>
                 <td className="text-center py-6 px-5 text-lg">{trade.asset}</td>
-                <td className="text-center py-6 px-5 text-lg">{trade.leverage}</td>
-                <td className="text-left py-6 px-5 text-lg"> {trade.dollar}{trade.amount}</td>
+                <td className="text-left py-6 px-5 text-lg"> {trade.amount}</td>
                 <td className="text-left py-6 px-5 text-lg">{trade.openingValue} <br /> {trade.curreny} </td>
                 <td className="text-left py-6 px-5 text-lg">{trade.currentValue} <br /> {trade.curreny} </td>
                 <td className="text-center py-6 px-5 text-lg">{trade.qty}<br />{trade.categoery}</td>
